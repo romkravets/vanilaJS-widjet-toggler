@@ -1,5 +1,6 @@
 import { Toggler } from './scripts/toggler';
 import './index.scss';
+import { TogglerControl } from './scripts/togglerControl';
 
 
 const first = new Toggler(document
@@ -7,3 +8,5 @@ const first = new Toggler(document
 
 const second = new Toggler(document
    .querySelector('#togglerSecond'), 'HELLOW WORLD 2!');
+
+const globalController = new TogglerControl(document.querySelector('#togglerController'));

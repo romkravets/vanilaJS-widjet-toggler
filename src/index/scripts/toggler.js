@@ -19,11 +19,19 @@ export class Toggler {
 
    toggle() {
       if (this.isEnable) {
-         this.btn.style.backgroundColor = '';
-         this.isEnable= false;
+         this.disable();
       } else {
-         this.btn.style.backgroundColor = this.backgroundColor;
-         this.isEnable= true;
+         this.enable();
       }
+   }
+
+   enable() {
+      this.btn.style.backgroundColor = this.backgroundColor;
+      this.isEnable= true;
+   }
+
+   disable() {
+      this.btn.style.backgroundColor = '';
+      this.isEnable= false;
    }
 }
